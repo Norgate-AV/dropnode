@@ -5,6 +5,9 @@
     "version": "0.0.0-development",
     "license": "MIT",
     "main": "./dist/index.js",
+    "bin": {
+        "dropnode": "./dist/index.js"
+    },
     "repository": {
         "type": "git",
         "url": ""
@@ -31,6 +34,7 @@
         "@commitlint/cli": "^17.7.1",
         "@commitlint/config-conventional": "^17.7.0",
         "@types/config": "^3.3.1",
+        "@types/glob": "^8.1.0",
         "@types/node": "^20.6.4",
         "@types/nodemon": "^1.19.1",
         "commitizen": "^4.3.0",
@@ -47,8 +51,14 @@
         "typescript": "^5.2.2"
     },
     "dependencies": {
+        "@inquirer/prompts": "^3.2.0",
+        "@listr2/prompt-adapter-inquirer": "^1.0.1",
+        "chalk": "v4",
         "config": "^3.3.9",
         "dotenv": "^16.3.1",
-        "envalid": "^8.0.0"
+        "envalid": "^8.0.0",
+        "execa": "^5.1.1",
+        "glob": "^10.3.10",
+        "listr2": "^7.0.1"
     }
 }
