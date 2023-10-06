@@ -53,7 +53,7 @@
     "dependencies": {
         "@inquirer/prompts": "^3.2.0",
         "@listr2/prompt-adapter-inquirer": "^1.0.1",
-        "chalk": "v4",
+        "chalk": "v5",
         "config": "^3.3.9",
         "dotenv": "^16.3.1",
         "envalid": "^8.0.0",
