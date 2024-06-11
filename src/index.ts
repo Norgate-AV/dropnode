@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import "dotenv/config";
-import execa from "execa";
+import { execa } from "execa";
 import os from "os";
 import { resolve } from "path";
 import { glob } from "glob";
@@ -42,9 +42,7 @@ interface Ctx {
                     title: "Select node_modules to ignore",
                     task: async (ctx, task): Promise<string[]> => {
                         const paths = await task
-                            .prompt<ListrInquirerPromptAdapter>(
-                                ListrInquirerPromptAdapter,
-                            )
+                            .prompt(ListrInquirerPromptAdapter)
                             .run(checkbox, {
                                 message: "Select node_modules to ignore",
                                 choices: ctx.paths.map((path) => ({

@@ -49,8 +49,7 @@
             "markdownDescription": "Configuration options for [tsup](https://tsup.egoist.dev)",
             "properties": {
                 "entry": {
-                    "markdownDescription": "Files that each serve as an input to the bundling algorithm.\n\n---\nReferences:\n- [Entry Points](https://esbuild.git
-hub.io/api/#entry-points) - esbuild\n - [Multiple Entrypoints](https://tsup.egoist.dev/#multiple-entrypoints) - tsup",
+                    "markdownDescription": "Files that each serve as an input to the bundling algorithm.\n\n---\nReferences:\n- [Entry Points](https://esbuild.github.io/api/#entry-points) - esbuild\n - [Multiple Entrypoints](https://tsup.egoist.dev/#multiple-entrypoints) - tsup",
                     "oneOf": [
                         {
                             "type": "array",
@@ -64,8 +63,7 @@ hub.io/api/#entry-points) - esbuild\n - [Multiple Entrypoints](https://tsup.egoi
                     ]
                 },
                 "treeshake": {
-                    "markdownDescription": "By default esbuild already does treeshaking but this option allow you to perform additional treeshaking with Rollup an
-d result in smaller bundle size.",
+                    "markdownDescription": "By default esbuild already does treeshaking but this option allow you to perform additional treeshaking with Rollup and result in smaller bundle size.",
                     "oneOf": [
                         {
                             "type": "boolean"
@@ -85,8 +83,7 @@ d result in smaller bundle size.",
                     "description": "Output different formats to different folder instead of using different extension"
                 },
                 "target": {
-                    "markdownDescription": "This sets the target environment for the generated code\n\n---\nReferences:\n- [Target](https://esbuild.github.io/api/
-#target) - esbuild",
+                    "markdownDescription": "This sets the target environment for the generated code\n\n---\nReferences:\n- [Target](https://esbuild.github.io/api/#target) - esbuild",
                     "default": "node14",
                     "oneOf": [
                         {
@@ -194,10 +191,7 @@ d result in smaller bundle size.",
                     "type": "object"
                 },
                 "dts": {
-                    "markdownDescription": "This will emit `./dist/index.js` and `./dist/index.d.ts`.\n\nIf you have multiple entry files, each entry will get a c
-orresponding `.d.ts` file. So when you only want to generate declaration file for a single entry, use `--dts <entry>` format, e.g. `--dts src/index.ts`.\n\n**Note
-** that `--dts` does not resolve external (aka in node_modules) types used in the `.d.ts file`, if that's somehow a requirement, try the experimental `--dts-resol
-ve` flag instead.",
+                    "markdownDescription": "This will emit `./dist/index.js` and `./dist/index.d.ts`.\n\nIf you have multiple entry files, each entry will get a corresponding `.d.ts` file. So when you only want to generate declaration file for a single entry, use `--dts <entry>` format, e.g. `--dts src/index.ts`.\n\n**Note** that `--dts` does not resolve external (aka in node_modules) types used in the `.d.ts file`, if that's somehow a requirement, try the experimental `--dts-resolve` flag instead.",
                     "oneOf": [
                         {
                             "type": "boolean"
@@ -254,8 +248,7 @@ ve` flag instead.",
                 },
                 "replaceNodeEnv": {
                     "type": "boolean",
-                    "markdownDescription": "Replace `process.env.NODE_ENV` with `production` or `development` `production` when the bundled is minified, `developm
-ent` otherwise"
+                    "markdownDescription": "Replace `process.env.NODE_ENV` with `production` or `development` `production` when the bundled is minified, `development` otherwise"
                 },
                 "splitting": {
                     "type": "boolean",
@@ -304,8 +297,7 @@ ent` otherwise"
                     "description": "Disable bundling, default to true"
                 },
                 "inject": {
-                    "markdownDescription": "This option allows you to automatically replace a global variable with an import from another file.\n\n---\nSee:\n- [I
-nject](https://esbuild.github.io/api/#inject) - esbuild",
+                    "markdownDescription": "This option allows you to automatically replace a global variable with an import from another file.\n\n---\nSee:\n- [Inject](https://esbuild.github.io/api/#inject) - esbuild",
                     "type": "array",
                     "items": {
                         "type": "string"
