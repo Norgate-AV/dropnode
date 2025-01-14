@@ -13,6 +13,7 @@ import isWsl from "is-wsl";
 
 interface Ctx {
     paths: string[];
+    selectPaths: boolean;
 }
 
 (async () => {
@@ -36,10 +37,13 @@ interface Ctx {
                                 path.indexOf("node_modules") ===
                                 path.lastIndexOf("node_modules"),
                         );
+
+                        ctx.selectPaths = ctx.paths.length > 1;
                     },
                 },
                 {
                     title: "Select node_modules to ignore",
+                    enabled: (ctx): boolean => ctx.selectPaths,
                     task: async (ctx, task): Promise<string[]> => {
                         const paths = await task
                             .prompt(ListrInquirerPromptAdapter)
